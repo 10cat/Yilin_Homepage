@@ -7,8 +7,8 @@
   <meta name="description" content="Personal academic homepage." />
   <meta name="color-scheme" content="light dark" />
   <style>
-    :root{ --bg:#ffffff; --fg:#000; --muted:#555; --link:#0645ad; --line:#e5e5e5; }
-    @media (prefers-color-scheme: dark){ :root{ --bg:#0b0f14; --fg:#f2f4f8; --muted:#a0a6b0; --link:#8ab4f8; --line:#1f2630; } }
+    :root{ --bg:#ffffff; --fg:#000; --muted:#555; --link:#0645ad; --line:#e5e5e5; --highlight:#fff3b0; }
+    @media (prefers-color-scheme: dark){ :root{ --bg:#0b0f14; --fg:#f2f4f8; --muted:#a0a6b0; --link:#8ab4f8; --line:#1f2630; --highlight:#665c00; } }
     html,body{height:100%}
     body{margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
     a{color:var(--link)}
@@ -27,6 +27,7 @@
     .pub-body p{margin:.45em 0}
     .pub-links a{white-space:nowrap}
     .desc{color:var(--muted)}
+    .highlight-name{background-color:var(--highlight); padding:0 2px; border-radius:3px; font-weight:bold}
   </style>
 </head>
 <body>
@@ -39,7 +40,7 @@
     <!-- About / Bio -->
     <section id="about">
       <img src="assets/headshot.jpg" alt="Headshot" class="avatar"/>
-      <p>I am a PhD candidate from the <b>Vision and Learning Lab</b> at the University of Alberta, supervised by Prof. <a href="https://webdocs.cs.ualberta.ca/~lcheng5/" target="_blank" rel="noopener">Li Cheng</a>. My research interests lie in <b>Generative AI</b> for 3D computer vision and animation, especially 3D human motion generation, human–object interaction, and character animation.</p>
+      <p>I am a PhD candidate from the <b>Vision and Learning Lab</b> at the University of Alberta, supervised by Prof. <a href="https://vision-and-learning-lab-ualberta.github.io/author/li-cheng/" target="_blank" rel="noopener">Li Cheng</a>. My research interests lie in <b>Generative AI</b> for 3D computer vision and animation, especially 3D human motion generation, human–object interaction, and character animation.</p>
     </section>
 
     <!-- News -->
@@ -61,7 +62,7 @@
         <img class="pub-thumb" src="assets/motiondreamer_thumb.gif" alt="MotionDreamer demo thumbnail"/>
         <div class="pub-body">
           <p><b>MotionDreamer: One-to-Many Motion Synthesis with Localized Generative Masked Transformer</b><br/>
-          <b>Yilin Wang</b>, Chuan Guo, Yuxuan Mu, Muhammad Gohar Javed, Xinxin Zuo, Juwei Lu, Hai Jiang, Li Cheng<br/>
+          <span class="highlight-name">Yilin Wang</span>, Chuan Guo, Yuxuan Mu, Muhammad Gohar Javed, Xinxin Zuo, Juwei Lu, Hai Jiang, Li Cheng<br/>
           <i>ICLR</i>, 2025</p>
           <p class="pub-links">
             <a href="https://motiondreamer.github.io/" target="_blank" rel="noopener">webpage</a> /
@@ -78,7 +79,7 @@
         <img class="pub-thumb" src="assets/gsd_thumb.gif" alt="GSD paper thumbnail"/>
         <div class="pub-body">
           <p><b>GSD: View-Guided Gaussian Splatting Diffusion for 3D Reconstruction</b><br/>
-          Yuxuan Mu, Xinxin Zuo, Chuan Guo, <b>Yilin Wang</b>, Juwei Lu, Xiaofeng Wu, Songcen Xu, Peng Dai, Youliang Yan, Li Cheng<br/>
+          Yuxuan Mu, Xinxin Zuo, Chuan Guo, <span class="highlight-name">Yilin Wang</span>, Juwei Lu, Xiaofeng Wu, Songcen Xu, Peng Dai, Youliang Yan, Li Cheng<br/>
           <i>ECCV</i>, 2024</p>
           <p class="pub-links">
             <a href="https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/10117.pdf" target="_blank" rel="noopener">paper</a> /
@@ -94,7 +95,7 @@
         <img class="pub-thumb" src="assets/regiongrasp_thumb.png" alt="RegionGrasp thumbnail"/>
         <div class="pub-body">
           <p><b>RegionGrasp: A Novel Task for Contact Region Controllable Hand Grasp Generation</b><br/>
-          <b>Yilin Wang</b>, Chuan Guo, Li Cheng, Hai Jiang<br/>
+          <span class="highlight-name">Yilin Wang</span>, Chuan Guo, Li Cheng, Hai Jiang<br/>
           <i>HANDS@ECCV</i>, 2024 (Workshop)</p>
           <p class="pub-links">
             <a href="https://hands-workshop.org/workshop2024.html" target="_blank" rel="noopener">workshop</a> /
