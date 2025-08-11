@@ -3,349 +3,121 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Firstname Lastname — AI / Computer Vision Research</title>
-  <meta name="description" content="Personal academic homepage for an AI / Computer Vision researcher: bio, publications, projects, teaching, service, and contact." />
+  <title>Yilin Wang</title>
+  <meta name="description" content="Personal academic homepage." />
   <meta name="color-scheme" content="light dark" />
-  <meta name="theme-color" content="#0ea5e9" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' fill='%230ea5e9'/%3E%3Ctext x='50' y='60' text-anchor='middle' font-size='54' fill='white' font-family='Arial, Helvetica, sans-serif'%3EA%3C/text%3E%3C/svg%3E"/>
-
-  <!-- Open Graph / Twitter Card -->
-  <meta property="og:title" content="Firstname Lastname — AI / Computer Vision Research" />
-  <meta property="og:description" content="Publications, projects, and contact." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="/assets/og-preview.png" />
-  <meta name="twitter:card" content="summary_large_image" />
-
-  <!-- Schema.org Person JSON-LD -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Firstname Lastname",
-    "jobTitle": "PhD Candidate, Computer Vision",
-    "affiliation": {
-      "@type": "Organization",
-      "name": "University / Lab"
-    },
-    "url": "https://username.github.io/",
-    "email": "mailto:firstname.lastname@university.edu",
-    "sameAs": [
-      "https://scholar.google.com/citations?user=XXXXXXXX",
-      "https://github.com/username",
-      "https://www.linkedin.com/in/username/",
-      "https://x.com/username"
-    ]
-  }
-  </script>
-
   <style>
-    :root{
-      --bg: #ffffff; --fg:#0b1220; --muted:#5b687b; --line:#e6e8ec; --card:#f8fafc; --accent:#0ea5e9; --accent-2:#0369a1;
-      --radius: 16px; --shadow: 0 10px 30px rgba(2, 6, 23, .08);
-    }
-    @media (prefers-color-scheme: dark){
-      :root{ --bg:#0b1020; --fg:#e5e7eb; --muted:#95a0b3; --line:#1f2432; --card:#0f162c; --accent:#38bdf8; --accent-2:#0891b2; }
-    }
-    [data-theme="dark"]{ --bg:#0b1020; --fg:#e5e7eb; --muted:#95a0b3; --line:#1f2432; --card:#0f162c; --accent:#38bdf8; --accent-2:#0891b2; }
-    [data-theme="light"]{ --bg:#ffffff; --fg:#0b1220; --muted:#5b687b; --line:#e6e8ec; --card:#f8fafc; --accent:#0ea5e9; --accent-2:#0369a1; }
-
-    html, body { height: 100%; }
-    body{ margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; background:var(--bg); color:var(--fg); line-height:1.6; }
-    a{ color:var(--accent-2); text-decoration-thickness: .08em; text-underline-offset: .22em; }
-    a:hover{ color:var(--accent); }
-
-    .container{ max-width: 1000px; margin: 0 auto; padding: 24px; }
-    header{ position: sticky; top:0; background: color-mix(in oklab, var(--bg) 94%, transparent); backdrop-filter: saturate(160%) blur(6px); border-bottom:1px solid var(--line); z-index: 50; }
-    .nav{ display:flex; align-items:center; gap:18px; padding: 10px 0; }
-    .nav .name{ font-weight: 800; letter-spacing:.2px; font-size: 1.1rem; }
-    .nav a{ color:var(--muted); text-decoration: none; padding:8px 10px; border-radius: 10px; }
-    .nav a:hover{ background: var(--card); color: var(--fg); }
-    .spacer{ flex:1; }
-
-    .hero{ display:grid; grid-template-columns: 160px 1fr; gap: 28px; padding: 28px 0 18px; align-items:center; }
-    .avatar{ width: 160px; height:160px; border-radius: 50%; object-fit:cover; box-shadow: var(--shadow); border: 6px solid color-mix(in oklab, var(--bg) 60%, var(--line)); }
-    h1{ font-size: clamp(28px, 4vw, 40px); margin:0 0 4px; line-height:1.1; }
-    .subtitle{ color:var(--muted); margin: 0 0 12px; }
-    .chips{ display:flex; flex-wrap: wrap; gap: 8px; }
-    .chip{ background: var(--card); border:1px solid var(--line); color: var(--muted); padding:6px 10px; border-radius: 999px; font-size: .9rem; }
-
-    section{ padding: 26px 0 6px; }
-    .section-title{ font-size: 1.1rem; letter-spacing:.22px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
-
-    .card{ background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); }
-    .grid{ display:grid; gap: 16px; }
-
-    /* News */
-    .news li{ margin-bottom: 10px; }
-    .time{ font-variant-numeric: tabular-nums; color: var(--muted); margin-right: 8px; }
-
-    /* Publications */
-    .pub-filters{ display:flex; flex-wrap:wrap; gap:8px; margin-bottom: 14px; }
-    .pub-filters button{ border:1px solid var(--line); background:var(--bg); color:var(--muted); border-radius:999px; padding:6px 10px; cursor:pointer; }
-    .pub-filters button.active{ background:var(--accent); color: white; border-color: transparent; }
-    .pub{ display:grid; grid-template-columns: 1fr auto; gap: 8px 16px; padding:14px; border-bottom:1px solid var(--line); }
-    .pub:last-child{ border-bottom:0; }
-    .pub .title{ font-weight: 700; }
-    .pub .authors{ color: var(--muted); }
-    .pub .meta{ color: var(--muted); font-size: .95rem; }
-    .pub .actions{ display:flex; gap:8px; }
-    .btn{ border:1px solid var(--line); background:var(--bg); color:var(--fg); padding:6px 10px; border-radius:10px; text-decoration:none; display:inline-flex; align-items:center; gap:6px; }
-    .btn:hover{ background: var(--card); }
-
-    /* Projects */
-    .projects{ grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
-    .project{ padding:14px; display:grid; gap:8px; }
-    .project img{ width:100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 10px; border:1px solid var(--line); }
-
-    /* Teaching & Service */
-    .cols{ display:grid; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); gap:16px; }
-    .list{ padding: 10px 14px; }
-    .list li{ margin: 6px 0; }
-
-    footer{ padding: 28px 0 40px; color: var(--muted); border-top: 1px solid var(--line); margin-top: 26px; }
-    .socials{ display:flex; gap:10px; flex-wrap:wrap; }
-
-    .kbd{ background: var(--card); border:1px solid var(--line); border-bottom-width: 3px; padding:.1em .4em; border-radius:8px; font-variant: all-small-caps; }
-
-    .sr-only{ position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
-
-    .theme-toggle{ border: none; background: var(--card); color: var(--fg); border:1px solid var(--line); padding:8px 10px; border-radius: 10px; cursor: pointer; }
+    :root{ --bg:#ffffff; --fg:#000; --muted:#555; --link:#0645ad; --line:#e5e5e5; }
+    @media (prefers-color-scheme: dark){ :root{ --bg:#0b0f14; --fg:#f2f4f8; --muted:#a0a6b0; --link:#8ab4f8; --line:#1f2630; } }
+    html,body{height:100%}
+    body{margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+    a{color:var(--link)}
+    .wrap{max-width:800px; margin:0 auto; padding:28px 18px}
+    header{border-bottom:1px solid var(--line); margin-bottom:18px}
+    h1{margin:0 0 8px; font-size:28px}
+    h2{margin:18px 0 6px; font-size:18px}
+    .muted{color:var(--muted)}
+    .aff{margin:0}
+    .avatar{float:right; width:120px; height:120px; object-fit:cover; border-radius:4px; border:1px solid var(--line); margin-left:12px}
+    ul{padding-left:20px}
+    .pubs p{margin:.6em 0}
+    footer{border-top:1px solid var(--line); margin-top:24px; padding-top:10px; color:var(--muted); font-size:.95rem}
+      /* publication rows (thumbnail left, details right) */
+    .pub-item{display:grid; grid-template-columns:220px 1fr; gap:20px; align-items:start; margin:28px 0;}
+    .pub-thumb{width:220px; aspect-ratio:16/10; object-fit:cover; border:1px solid var(--line); border-radius:4px; background:#f5f5f5}
+    .pub-body p{margin:.45em 0}
+    .pub-links a{white-space:nowrap}
+    .desc{color:var(--muted)}
   </style>
 </head>
 <body>
-  <header>
-    <div class="container nav">
-      <div class="name">Firstname Lastname</div>
-      <a href="#about">About</a>
-      <a href="#news">News</a>
-      <a href="#publications">Publications</a>
-      <a href="#projects">Projects</a>
-      <a href="#teaching">Teaching</a>
-      <a href="#service">Service</a>
-      <a href="#contact">Contact</a>
-      <div class="spacer"></div>
-      <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">🌓</button>
-    </div>
-  </header>
+  <main class="wrap">
+    <header>
+      <h1>Yilin Wang</h1>
+      <p class="aff muted">PhD Candidate, 3D Generative AI · University of Alberta (Vision and Learning Lab) · <a href="mailto:yilin32@ualberta.ca">yilin32@ualberta.ca</a> · <a href="https://scholar.google.com/citations?user=bXXYyf4AAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a> · <a href="https://github.com/10cat" target="_blank" rel="noopener">GitHub</a></p>
+    </header>
 
-  <main class="container">
-    <!-- HERO -->
-    <section class="hero" id="about">
-      <img src="assets/headshot.jpg" alt="Headshot of Firstname Lastname" class="avatar"/>
-      <div>
-        <h1>Firstname Lastname</h1>
-        <p class="subtitle">PhD Candidate · Computer Vision & Generative AI · <span style="white-space:nowrap">University / Lab</span></p>
-        <div class="chips">
-          <span class="chip">Generative Models</span>
-          <span class="chip">3D Human Motion</span>
-          <span class="chip">Representation Learning</span>
-          <span class="chip">Multimodal</span>
-        </div>
-        <p style="margin-top:12px">I'm a researcher focusing on generative modeling for motion and geometry, especially localized transformers and efficient attention for long sequences. I collaborate with <a href="#">Lab/Advisor</a>. Previously at <a href="#">Company/Institute</a>.</p>
-        <p>My email is <a href="mailto:firstname.lastname@university.edu">firstname.lastname@university.edu</a>.</p>
-      </div>
+    <!-- About / Bio -->
+    <section id="about">
+      <img src="assets/headshot.jpg" alt="Headshot" class="avatar"/>
+      <p>I am a PhD candidate from the <b>Vision and Learning Lab</b> at the University of Alberta, supervised by Prof. <a href="https://webdocs.cs.ualberta.ca/~lcheng5/" target="_blank" rel="noopener">Li Cheng</a>. My research interests lie in <b>Generative AI</b> for 3D computer vision and animation, especially 3D human motion generation, human–object interaction, and character animation.</p>
     </section>
 
-    <!-- NEWS -->
+    <!-- News -->
     <section id="news">
-      <div class="section-title">News</div>
-      <div class="card">
-        <ul class="news" style="list-style: none; margin:0; padding: 14px 18px;">
-          <li><span class="time">2025-08</span> One paper accepted to <strong>NeurIPS</strong> (Spotlight). Preprint and code released.</li>
-          <li><span class="time">2025-06</span> Invited talk at <strong>CVPR Workshop on Motion Generation</strong>.</li>
-          <li><span class="time">2025-04</span> Our dataset proposal received ethics approval.</li>
-        </ul>
-      </div>
+      <h2>News</h2>
+      <ul>
+        <li><b>2025‑04</b> — Our paper <i>MotionDreamer</i> was accepted to <b>ICLR 2025</b> (Poster).</li>
+        <li><b>2024‑07</b> — Our paper <i>RegionGrasp</i> was accepted to <b>HANDS@ECCV 2024 Workshop</b>.</li>
+        <li><b>2024‑07</b> — Our paper <i>GSD</i> was accepted to <b>ECCV 2024</b>.</li>
+      </ul>
     </section>
 
-    <!-- PUBLICATIONS -->
-    <section id="publications">
-      <div class="section-title">Publications</div>
-      <div class="pub-filters">
-        <button class="active" data-filter="all">All</button>
-        <button data-filter="2025">2025</button>
-        <button data-filter="2024">2024</button>
-        <button data-filter="gen">Generative</button>
-        <button data-filter="cv">Computer Vision</button>
-      </div>
-      <div class="card" id="pubList">
-        <!-- Example Publication Item -->
-        <article class="pub" data-year="2025" data-tags="gen cv">
-          <div>
-            <div class="title">MotionDreamer: One-to-More Motion Synthesis with Localized Generative Masked Transformer</div>
-            <div class="authors"><strong>Firstname Lastname</strong>, Coauthor A, Coauthor B</div>
-            <div class="meta">NeurIPS 2025 (Spotlight)</div>
-          </div>
-          <div class="actions">
-            <a class="btn" href="https://arxiv.org/abs/xxxx.xxxxx" target="_blank" rel="noopener">Paper</a>
-            <a class="btn" href="https://github.com/username/motiondreamer" target="_blank" rel="noopener">Code</a>
-            <button class="btn" data-bibtex='@inproceedings{lastname2025motiondreamer,\n  title={MotionDreamer: One-to-More Motion Synthesis with Localized Generative Masked Transformer},\n  author={Lastname, Firstname and Coauthor, A. and Coauthor, B.},\n  booktitle={NeurIPS},\n  year={2025}\n}'>BibTeX</button>
-          </div>
-        </article>
-        <article class="pub" data-year="2024" data-tags="cv">
-          <div>
-            <div class="title">Efficient Sliding-Window Local Attention for Long-Sequence Vision</div>
-            <div class="authors">Coauthor C, <strong>Firstname Lastname</strong>, Coauthor D</div>
-            <div class="meta">CVPR 2024</div>
-          </div>
-          <div class="actions">
-            <a class="btn" href="#">Paper</a>
-            <a class="btn" href="#">Project</a>
-            <button class="btn" data-bibtex='@inproceedings{c2024swla,\n  title={Efficient Sliding-Window Local Attention for Long-Sequence Vision},\n  author={C, Coauthor and Lastname, Firstname and D, Coauthor},\n  booktitle={CVPR},\n  year={2024}\n}'>BibTeX</button>
-          </div>
-        </article>
-      </div>
-    </section>
+    <!-- Publications -->
+    <section id="publications" class="pubs">
+      <h2>Publications</h2>
 
-    <!-- PROJECTS -->
-    <section id="projects">
-      <div class="section-title">Selected Projects</div>
-      <div class="grid projects">
-        <article class="card project">
-          <img src="assets/project_thumb.jpg" alt="Project thumbnail" />
-          <div style="display:flex; align-items:center; justify-content:space-between; gap:8px;">
-            <div style="font-weight:700">Reminiscent Motion Generation</div>
-            <span class="chip">2025</span>
-          </div>
-          <p>Single-reference motion synthesis via localized codebooks and differentiable indexing.</p>
-          <div style="display:flex; gap:8px; flex-wrap:wrap;">
-            <a class="btn" href="#" target="_blank" rel="noopener">Demo</a>
-            <a class="btn" href="#" target="_blank" rel="noopener">Code</a>
-            <a class="btn" href="#" target="_blank" rel="noopener">Paper</a>
-          </div>
-        </article>
-        <article class="card project">
-          <img src="assets/project2_thumb.jpg" alt="Project thumbnail" />
-          <div style="display:flex; align-items:center; justify-content:space-between; gap:8px;">
-            <div style="font-weight:700">SWLA Toolkit</div>
-            <span class="chip">2024</span>
-          </div>
-          <p>Open-source implementation of Sliding Window Local Attention for PyTorch.</p>
-          <div style="display:flex; gap:8px; flex-wrap:wrap;">
-            <a class="btn" href="#" target="_blank" rel="noopener">Docs</a>
-            <a class="btn" href="#" target="_blank" rel="noopener">GitHub</a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- TEACHING & SERVICE -->
-    <section id="teaching">
-      <div class="section-title">Teaching</div>
-      <div class="card list">
-        <ul>
-          <li>TA, Deep Learning (2024 Fall), University</li>
-          <li>Guest Lecture, Generative Models for Motion (2025 Spring)</li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="service">
-      <div class="section-title">Service</div>
-      <div class="card cols">
-        <div class="list">
-          <h3 style="margin:6px 0 6px; font-size:1rem">Reviewer</h3>
-          <ul>
-            <li>CVPR, ICCV, ECCV</li>
-            <li>NeurIPS, ICLR</li>
-          </ul>
+      <!-- MotionDreamer -->
+      <div class="pub-item">
+        <img class="pub-thumb" src="assets/motiondreamer_thumb.jpg" alt="MotionDreamer demo thumbnail"/>
+        <div class="pub-body">
+          <p><b>MotionDreamer: One-to-Many Motion Synthesis with Localized Generative Masked Transformer</b><br/>
+          <a href="https://scholar.google.com/citations?user=bXXYyf4AAAAJ&hl=en" target="_blank" rel="noopener"><b>Yilin Wang</b></a>, <a href="https://scholar.google.com/citations?user=Qb8F00YAAAAJ&hl=en" target="_blank" rel="noopener">Chuan Guo</a>, Yuxuan Mu, Muhammad Gohar Javed, Xinxin Zuo, Juwei Lu, Hai Jiang, <a href="https://webdocs.cs.ualberta.ca/~lcheng5/" target="_blank" rel="noopener">Li Cheng</a><br/>
+          <i>ICLR</i>, 2025</p>
+          <p class="pub-links">
+            <a href="https://motiondreamer.github.io/" target="_blank" rel="noopener">webpage</a> /
+            <a href="https://arxiv.org/abs/2504.08959" target="_blank" rel="noopener">paper</a> /
+            <a href="https://openreview.net/forum?id=d23EVDRJ6g" target="_blank" rel="noopener">openreview</a> /
+            <a href="#" onclick="navigator.clipboard.writeText(`@inproceedings{wang2025motiondreamer, title={MotionDreamer: One-to-Many Motion Synthesis with Localized Generative Masked Transformer}, author={Wang, Yilin and Guo, Chuan and Mu, Yuxuan and Javed, Muhammad Gohar and Zuo, Xinxin and Lu, Juwei and Jiang, Hai and Cheng, Li}, booktitle={International Conference on Learning Representations (ICLR)}, year={2025}}`); alert('BibTeX copied'); return false;">bibtex</a>
+          </p>
+          <p class="desc">Localized masked modeling paradigm to learn motion internal patterns from one motion with arbitrary topology.</p>
         </div>
-        <div class="list">
-          <h3 style="margin:6px 0 6px; font-size:1rem">Awards</h3>
-          <ul>
-            <li>Best Paper, XYZ Workshop (2024)</li>
-            <li>Graduate Scholarship (2023-2025)</li>
-          </ul>
+      </div>
+
+      <!-- GSD -->
+      <div class="pub-item">
+        <img class="pub-thumb" src="assets/gsd_thumb.jpg" alt="GSD paper thumbnail"/>
+        <div class="pub-body">
+          <p><b>GSD: View-Guided Gaussian Splatting Diffusion for 3D Reconstruction</b><br/>
+          Yuxuan Mu, Xinxin Zuo, Chuan Guo, <b>Yilin Wang</b>, Juwei Lu, Xiaofeng Wu, Songcen Xu, Peng Dai, Youliang Yan, <a href="https://webdocs.cs.ualberta.ca/~lcheng5/" target="_blank" rel="noopener">Li Cheng</a><br/>
+          <i>ECCV</i>, 2024</p>
+          <p class="pub-links">
+            <a href="https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/10117.pdf" target="_blank" rel="noopener">paper</a> /
+            <a href="https://dl.acm.org/doi/10.1007/978-3-031-72986-7_4" target="_blank" rel="noopener">springer</a> /
+            <a href="#" onclick="navigator.clipboard.writeText(`@inproceedings{mu2024gsd, title={GSD: View-Guided Gaussian Splatting Diffusion for 3D Reconstruction}, author={Mu, Yuxuan and Zuo, Xinxin and Guo, Chuan and Wang, Yilin and Lu, Juwei and Wu, Xiaofeng and Xu, Songcen and Dai, Peng and Yan, Youliang and Cheng, Li}, booktitle={European Conference on Computer Vision (ECCV)}, year={2024}}`); alert('BibTeX copied'); return false;">bibtex</a>
+          </p>
+          <p class="desc">The first 3D diffusion model directly upon Gaussian Splatting for real-world object reconstruction, with fine-grained view-guided conditioning.</p>
+        </div>
+      </div>
+
+      <!-- RegionGrasp -->
+      <div class="pub-item">
+        <img class="pub-thumb" src="assets/regiongrasp_thumb.jpg" alt="RegionGrasp thumbnail"/>
+        <div class="pub-body">
+          <p><b>RegionGrasp: A Novel Task for Contact Region Controllable Hand Grasp Generation</b><br/>
+          <b>Yilin Wang</b>, Chuan Guo, Li Cheng, Hai Jiang<br/>
+          <i>HANDS@ECCV</i>, 2024 (Workshop)</p>
+          <p class="pub-links">
+            <a href="https://hands-workshop.org/workshop2024.html" target="_blank" rel="noopener">workshop</a> /
+            <a href="https://arxiv.org/abs/2410.07995" target="_blank" rel="noopener">paper</a> /
+            <a href="https://link.springer.com/chapter/10.1007/978-3-031-91578-9_2" target="_blank" rel="noopener">springer</a> /
+            <a href="#" onclick="navigator.clipboard.writeText(`@inproceedings{wang2024regiongrasp, title={RegionGrasp: A Novel Task for Contact Region Controllable Hand Grasp Generation}, author={Wang, Yilin and Guo, Chuan and Cheng, Li and Jiang, Hai}, booktitle={HANDS Workshop at European Conference on Computer Vision (ECCV)}, year={2024}}`); alert('BibTeX copied'); return false;">bibtex</a>
+          </p>
+          <p class="desc">Defines a controllable hand grasp task with contact-region guidance, enabling precise contact localization in generated grasps.</p>
         </div>
       </div>
     </section>
 
-    <!-- CONTACT -->
+    <!-- Contact -->
     <section id="contact">
-      <div class="section-title">Contact</div>
-      <div class="card" style="padding: 14px 18px; display:grid; gap:8px;">
-        <div class="socials">
-          <a class="btn" href="mailto:firstname.lastname@university.edu" aria-label="Email">📧 Email</a>
-          <a class="btn" href="https://scholar.google.com/citations?user=XXXXXXXX" target="_blank" rel="noopener" aria-label="Google Scholar">🎓 Scholar</a>
-          <a class="btn" href="https://github.com/username" target="_blank" rel="noopener" aria-label="GitHub">🐙 GitHub</a>
-          <a class="btn" href="https://x.com/username" target="_blank" rel="noopener" aria-label="Twitter/X">𝕏 Twitter</a>
-          <a class="btn" href="assets/CV.pdf" target="_blank" rel="noopener" aria-label="CV">📄 CV</a>
-        </div>
-        <small>Tip: Press <span class="kbd">/</span> to quickly filter publications by year or tag.</small>
-      </div>
+      <h2>Contact</h2>
+      <p>Email is best: <a href="mailto:yilin32@ualberta.ca">yilin32@ualberta.ca</a></p>
     </section>
 
     <footer>
-      <div>© <span id="year"></span> Firstname Lastname. Last updated <span id="lastUpdated">2025-08-09</span>.</div>
-      <div>Built with a lightweight, dependency-free template and hosted on GitHub Pages.</div>
+      © <span id="year"></span> Firstname Lastname · Last updated <span id="lastUpdated">2025‑08‑11</span>
     </footer>
   </main>
-
-  <!-- BibTeX Modal -->
-  <dialog id="bibtexModal" style="max-width: 720px; width: 92%; border:1px solid var(--line); border-radius: 12px; background: var(--bg); color: var(--fg);">
-    <form method="dialog">
-      <h3 style="margin:.4rem 0 0.6rem">BibTeX</h3>
-      <textarea id="bibtexText" rows="10" style="width:100%; box-sizing:border-box; background:var(--card); color:var(--fg); border:1px solid var(--line); border-radius:10px; padding:10px; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;"></textarea>
-      <div style="display:flex; gap:8px; justify-content:flex-end; margin-top:.6rem">
-        <button class="btn" id="copyBib">Copy</button>
-        <button class="btn" value="close">Close</button>
-      </div>
-    </form>
-  </dialog>
-
-  <script>
-    // Theme persistence
-    const root = document.documentElement;
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme) root.setAttribute('data-theme', savedTheme);
-    document.getElementById('themeToggle').addEventListener('click', ()=>{
-      const cur = root.getAttribute('data-theme');
-      const next = cur === 'dark' ? 'light' : 'dark';
-      root.setAttribute('data-theme', next);
-      localStorage.setItem('theme', next);
-    });
-
-    // Current year
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Publication filters (clickable chips + quick "/" search)
-    const pubList = document.getElementById('pubList');
-    const filterButtons = Array.from(document.querySelectorAll('.pub-filters button'));
-    function applyFilter(kind){
-      filterButtons.forEach(b => b.classList.toggle('active', b.dataset.filter === kind || (kind==='all' && b.dataset.filter===undefined)));
-      Array.from(pubList.children).forEach(el => {
-        const y = el.getAttribute('data-year');
-        const tags = (el.getAttribute('data-tags')||'').split(/\s+/);
-        const show = (kind==='all') || (y===kind) || tags.includes(kind);
-        el.style.display = show ? 'grid' : 'none';
-      });
-    }
-    filterButtons.forEach(btn => btn.addEventListener('click', ()=>applyFilter(btn.dataset.filter)));
-    applyFilter('all');
-    window.addEventListener('keydown', (e)=>{
-      if (e.key === '/'){
-        e.preventDefault();
-        const key = prompt('Filter by year (e.g., 2025) or tag (gen, cv). Leave blank for all.');
-        if (!key) return applyFilter('all');
-        applyFilter(key.trim());
-      }
-    });
-
-    // BibTeX modal logic
-    const bibtexModal = document.getElementById('bibtexModal');
-    const bibtexText = document.getElementById('bibtexText');
-    document.querySelectorAll('button.btn[data-bibtex]').forEach(btn => {
-      btn.addEventListener('click', ()=>{
-        bibtexText.value = btn.getAttribute('data-bibtex');
-        bibtexModal.showModal();
-      });
-    });
-    document.getElementById('copyBib').addEventListener('click', (e)=>{
-      e.preventDefault();
-      bibtexText.select();
-      document.execCommand('copy');
-      alert('BibTeX copied to clipboard');
-    });
-  </script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
